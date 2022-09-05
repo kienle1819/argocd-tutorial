@@ -25,7 +25,24 @@ Create a new namespace `argocd` and deploy ArgoCD with the web UI included.
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
-
+## Install traefik
+```
+kubectl create namespace traefik
+kubectl get namespaces
+helm repo add traefik https://helm.traefik.io/traefik
+helm repo update
+helm install --namespace=traefik traefik traefik/traefik --values=traefik/values.yaml
+kubectl get svc --all-namespaces -o wide
+```
+## Install cert-manager
+```
+helm repo add jetstack https://charts.jetstack.io
+helm repo update
+kubectl create namespace cert-manager
+kubectl get namespaces
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.9.1/cert-manager.crds.yaml
+helm install cert-manager jetstack/cert-manager --namespace cert-manager --values=cert-manager/values.yaml --version v1.9.1
+```
 ### Expose ArgoCD with Traefik
 
 Create a new IngressRoute object, follow the template described in `traefik-ingressroute.yml`.
