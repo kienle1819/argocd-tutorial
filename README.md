@@ -43,6 +43,11 @@ kubectl get namespaces
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.9.1/cert-manager.crds.yaml
 helm install cert-manager jetstack/cert-manager --namespace cert-manager --values=cert-manager/values.yaml --version v1.9.1
 ```
+## Apply cert domain ArgoCD with Traefik
+```
+kubectl apply -f issuers/letsencrypt-production.yaml
+kubectl apply -f cert-manager/argocd-domain-com.yaml
+```
 ### Expose ArgoCD with Traefik
 
 Create a new IngressRoute object, follow the template described in `traefik-ingressroute.yml`.
