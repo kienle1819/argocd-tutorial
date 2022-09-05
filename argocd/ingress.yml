@@ -24,18 +24,4 @@ spec:
           scheme: h2c
   tls:
     secretName: argocd-tls-secret
----
-apiVersion: cert-manager.io/v1
-kind: Certificate
-metadata:
-  name: argocd-cert
-  namespace: argocd
-spec:
-  secretName: argocd-tls-secret
-  issuerRef:
-    name: letsencrypt-production-cloudfare
-    kind: ClusterIssuer
-  commonName: "*.kienle.xyz"
-  dnsNames:
-    - "kienle.xyz"
-    - "*.kienle.xyz"
+
