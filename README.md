@@ -3,8 +3,8 @@ CI-CD, especially the CD part with the free and open-source Argo CD.
 
 We will use the free and open-source software ArgoCD.
 
-Project Homepage: https://argoproj.github.io/cd/
-Documentation: https://argo-cd.readthedocs.io/en/stable/
+- Project Homepage: https://argoproj.github.io/cd/
+- Documentation: https://argo-cd.readthedocs.io/en/stable/
 
 ## Prerequisites
 
@@ -31,8 +31,6 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 Create a new IngressRoute object, follow the template described in `traefik-ingressroute.yml`.
 
 ### Disable internal TLS
-
-First, to avoid internal redirection loops from HTTP to HTTPS, the API server should be run with TLS disabled.
 
 Edit the --insecure flag in the argocd-server command of the argocd-server deployment.
 
