@@ -1,5 +1,5 @@
 # ArgoCD Tutorial
-We start taking a look at CI-CD, especially the CD part with the free and open-source Argo CD. In this video, we will automate the deployment of a Nginx Web server on my Kubernetes Cluster. 
+CI-CD, especially the CD part with the free and open-source Argo CD. 
 
 We will use the free and open-source software ArgoCD.
 
@@ -13,7 +13,7 @@ Documentation: https://argo-cd.readthedocs.io/en/stable/
 - Kubectl configured
 - Public Git Repository on GitHub
 
-*You can still use ArgoCD on other Kubernetes Clusteres like AKS, EKS, GKE, etc. and other Git services, however, this is out-of-scope of this Tutorial!* 
+*You can still use ArgoCD on other Kubernetes Clusteres like AKS, EKS, GKE, etc.
 
 ## Install and configure ArgoCD
 
