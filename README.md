@@ -45,8 +45,8 @@ helm install cert-manager jetstack/cert-manager --namespace cert-manager --value
 ```
 ## Apply cert domain ArgoCD with Traefik
 ```
-kubectl apply -f issuers/letsencrypt-production.yaml
-kubectl apply -f cert-manager/argocd-domain-com.yaml
+kubectl apply -f cert-manager/issuers/letsencrypt-production.yaml
+kubectl apply -f cert-manager/certificates/argocd-domain-com.yaml
 ```
 ### Expose ArgoCD with Traefik
 
