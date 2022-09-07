@@ -51,6 +51,10 @@ kubectl apply -f cert-manager/certificates/argocd-domain-com.yaml
 ### Expose ArgoCD with Traefik
 
 Create a new IngressRoute object, follow the template described in `traefik-ingressroute.yml`.
+```
+kubectl apply -f argocd/ingress.yaml
+
+```
 
 ### Disable internal TLS
 
