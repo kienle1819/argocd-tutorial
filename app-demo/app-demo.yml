@@ -61,7 +61,7 @@ spec:
               number: 80
   tls:
   - hosts:
-    - app-demo.domain.com
+    - app-demo.kienle.xyz
     secretName: app-demo-tls-secret              
 ---
 apiVersion: cert-manager.io/v1
