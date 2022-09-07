@@ -49,7 +49,7 @@ metadata:
   namespace: app-demo
 spec:
   rules:
-  - host: "app-demo.domain.com"
+  - host: "app-demo.kienle.xyz"
     http:
       paths:
       - path: /
@@ -74,7 +74,7 @@ spec:
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
-  commonName: "*.domain.com"
+  commonName: "*.kienle.xyz"
   dnsNames:
-    - "domain.com"
-    - "*.domain.com"
+    - "kienle.xyz"
+    - "*.kienle.xyz"
