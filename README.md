@@ -52,7 +52,7 @@ kubectl apply -f cert-manager/certificates/argocd-domain-com.yaml
 
 Create a new IngressRoute object, follow the template described in `traefik-ingressroute.yml`.
 ```
-kubectl apply -f argocd/ingress.yaml
+kubectl apply -f argocd/ingress.yml
 
 ```
 
