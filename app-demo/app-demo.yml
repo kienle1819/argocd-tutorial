@@ -74,7 +74,6 @@ spec:
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
-  commonName: "*.kienle.xyz"
+  commonName: "app-demo.kienle.xyz"
   dnsNames:
-    - "kienle.xyz"
-    - "*.kienle.xyz"
+    - "app-demo.kienle.xyz"
